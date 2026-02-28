@@ -39,12 +39,14 @@ while True:
             obj_centre = (x1+x2)//2
             frame_centre = w//2
             pxPID = frame_centre - obj_centre
-            print(pxPID)
             if pxPID:
-                message = f"{pxPID:03d}"
+                print(pxPID)
+
+                message = str(pxPID)          
                 ser.write((message + "\n").encode())
+
                 print("Sent:", message)
-            
+                        
     
     cv2.imshow("f",frame)
 
