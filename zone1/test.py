@@ -20,7 +20,7 @@ while True:
     cv2.putText(frame, f"fps: {fps:.1f}", (100, 200),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (50, 0, 255), 2)
 
-    results = model(frame, conf=0.65)
+    results = model(frame, conf=0.8)
 
     for r in results:
         for box in r.boxes:
